@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cameron Lail</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="css/styles.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+    	
+    <title>Recommendations</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            max-width: 400px;
+            margin: 20px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background: #f9f9f9;
+        }
+        .section-container:hover {
+    transform: translateY(-10px); /* Moves container up */
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3); /* Enhances shadow */
+    transition: all 0.3s
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            background: #e3e3e3;
+            margin: 5px 0;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .navbar-brand {
+    font-weight: bold;
+    font-size: 24px;
+    color: #000 !important; /* Adjust color */
+}
+.navbar-nav li a:hover {
+    font-weight: bold;
+    color: #ff4500 !important;
+    text-decoration: underline;
+}
+.service-box i {
+    font-size: 40px; 
+    color: #007bff;
+}
+    </style>
+</head>
+<body>
+
+
+</script>
+
+</body>
+</html>   
+
+ <!-- Navigation Bar -->
+
+    <nav class="navbar navbar-default">
+
+        <div class="container-fluid">
+
+            <div class="navbar-header">
+
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-menu">
+
+                    <span class="icon-bar"></span>
+
+                    <span class="icon-bar"></span>
+
+                    <span class="icon-bar"></span>
+
+                </button>
+
+                <a class="navbar-brand" href="#">Cameron Lail</a>
+
+            </div>
+
+            <div class="collapse navbar-collapse" id="navbar-menu">
+
+                <ul class="nav navbar-nav visible-xs">
+
+                <ul class="nav navbar-nav">
+    <li><a href="#about" class="btn">About</a></li>
+    <li><a href="#portfolio" class="btn">Project Details</a></li>
+    <li><a href="#services" class="btn">Skills</a></li>
+    <li><a href="#recommendations" class="btn">Recommendations</a></li>
+</ul>
+            </div>
+
+        </div>
+
+    </nav>
+
+	
+<!-- Page Heading -->
+
+    <div class="container text-center">
+
+        <h1 id="top">Welcome</h1>
+
+    </div>
+
+ 
+   <!-- About Section -->
+    <section id="about" class="about">
+    	    <div class="container text-center">
+        <h2>About Me</h2>
+        <div class="about-gallery">
+           	<div class="about-item">
+    <img src="your-photo.jpg" alt="Your Name">
+</div>
+        <p>We are a boutique digital agency specializing in high-end, luxury web design and branding. Our mission is to create visually stunning and functionally powerful online experiences.</p>
+    </section>
+
+    <!-- Skills Section -->
+  		<div class="container-fluid"><div class="row">   
+	<section id="services" class="skills">
+    	<div id="services" class="col-xs-12 col-sm-6 col-md-4 section">
+  
+    	<div id='container text-center'>
+        <h2>Skills</h2>
+        <div class="service-container">
+            <div class="service-box">
+                <i class="fas fa-laptop-code"></i>
+                <h4>HTML</h4>
+                <p></p>
+            </div>
+            <div class="service-box">
+                <i class="fas fa-paint-brush"></i>
+                <h4>CSS</h4>
+                <p></p>
+            </div>
+            <div class="service-box">
+                <i class="fas fa-chart-line"></i>
+                <h4>JavaScript</h4>
+                <p></p>
+            </div>
+        </div>
+    </section>
+<!-- Portfolio Section -->
+<div class="section-container">
+    <section id="portfolio" class="portfolio">
+        <h2>Our Work</h2>
+        <div class="portfolio-gallery">
+            <div class="portfolio-item"><img src="project1.jpg" alt="Project 1"></div>
+            <div class="portfolio-item"><img src="project2.jpg" alt="Project 2"></div>
+            <div class="portfolio-item"><img src="project3.jpg" alt="Project 3"></div>
+        </div>
+    </section>
+</div>
+
+<!-- Skills Section -->
+<div class="section-container">
+    <section id="services" class="skills">
+        <h2>Skills</h2>
+        <div class="service-container">
+            <div class="service-box">
+                <i class="fas fa-laptop-code"></i>
+                <h4>HTML</h4>
+            </div>
+            <div class="service-box">
+                <i class="fas fa-paint-brush"></i>
+                <h4>CSS</h4>
+            </div>
+            <div class="service-box">
+                <i class="fas fa-chart-line"></i>
+                <h4>JavaScript</h4>
+            </div>
+        </div>
+    </section>
+</div>
+
+<!-- Recommendations Section -->
+<div class="section-container">
+    <section id="recommendations">
+        <h2>Leave a Recommendation</h2>
+        <textarea id="recommendationInput" rows="2" cols="30" placeholder="Write your recommendation here..."></textarea>
+        <br>
+        <button onclick="addRecommendation()">Send</button>
+        <h3>Recommendations:</h3>
+        <ul id="recommendationList"></ul>
+    </section>
+</div>
+
+<script>
+    function addRecommendation() {
+        // Get input value
+        let input = document.getElementById("recommendationInput").value.trim();
+
+        // Ensure input is not empty
+        if (input === "") {
+            alert("Please enter a recommendation before submitting.");
+            return;
+        }
+
+        // Create new list item
+        let li = document.createElement("li");
+        li.textContent = input;
+
+        // Append to the list
+        document.getElementById("recommendationList").appendChild(li);
+
+        // Clear the input field
+        document.getElementById("recommendationInput").value = "";
+    }
+</script>
+
+
+    <a href="#top" class="text-center">Back to Top</a>
+
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 CLL,LLC. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
