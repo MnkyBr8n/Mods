@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cameron Lail</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    
+    <style>
+        /* General Page Styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background: #006400;
+        }
+
+        /* Navbar Styling */
+        .navbar {
+            background-color: #333;
+        }
+        
+        .navbar-brand {
+            font-weight: bold;
+            font-size: 24px;
+            color: #fff !important;
+        }
+
+        .navbar-nav li a {
+            color: #fff !important;
+            cursor: pointer;
+        }
+
+        .navbar-nav li a:hover {
+            font-weight: bold;
+            color: #FFD700 !important;
+            text-decoration: underline;
+        }
+
+        /* Section Styling */
+        .container-section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            padding: 20px;
+        }
+
+        .section-container {
+            background: #D2691E;
+            padding: 20px;
+            margin: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease-in-out;
+            max-width: 400px;
+            text-align: center;
+        }
+
+        .section-container:hover {
+            transform: translateY(-5px);
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        h2 {
+            font-size: 24px;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        /* Image Styling */
+        .profile-image {
+            width: 200px;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+
+        /* Portfolio Images */
+        .portfolio-gallery img {
+            width: 100%;
+            max-width: 200px;
+            height: auto;
+            margin: 10px;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        .portfolio-gallery img:hover {
+            transform: scale(1.05);
+        }
+
+        /* Hover Effects */
+        button, .navbar-nav li a {
+            cursor: pointer;
+        }
+
+        /* Recommendation Box */
+        textarea {
+            width: 90%;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        button {
+            padding: 10px 15px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background-color: #555;
+        }
+
+        /* Pop-up Styling */
+        .popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: white;
+            padding: 20px;
+            box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
+            border-radius: 5px;
+            z-index: 10;
+        }
+
+        .popup button {
+            margin-top: 10px;
+        }
+
+    </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">Cameron Lail</a>
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-menu">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+
+        <div class="collapse navbar-collapse" id="navbar-menu">
+            <ul class="nav navbar-nav">
+                <li><a href="#about">About</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#recommendations">Recommendations</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Sections -->
+<div class="container-section">
+    
+    <!-- About Me -->
+    <div id="about" class="section-container">
+        <h2>About Me</h2>
+        <img src="Me.jpg" alt="Your Image" class="profile-image">
+        <p>Web developer passionate about high-end, visually stunning websites.</p>
+    </div>
+
+    <!-- Portfolio -->
+    <div id="portfolio" class="section-container">
+        <h2>Portfolio</h2>
+        <div class="portfolio-gallery">
+            <a href="https://mnkybr8n.github.io/Coursera-mods/" target="_blank"><img src="project1.jpg" alt="Project 1"></a>
+            <a href="https://mnkybr8n.github.io/mods" target="_blank"><img src="project2.jpg" alt="Project 2"></a>
+            <a href="https://mnkybr8n.github.io/IBM-FSC" target="_blank"><img src="project3.jpg" alt="Project 3"></a>
+        </div>
+    </div>
+
+    <!-- Skills -->
+    <div id="skills" class="section-container">
+        <h2>Skills</h2>
+        <ul>
+            <li><i class="fas fa-laptop-code"></i> HTML</li>
+            <li><i class="fas fa-paint-brush"></i> CSS</li>
+            <li><i class="fas fa-chart-line"></i> JavaScript</li>
+        </ul>
+    </div>
+
+    <!-- Recommendations -->
+    <div id="recommendations" class="section-container">
+        <h2>Leave a Recommendation</h2>
+        <textarea id="recommendationInput" placeholder="Write your recommendation here..."></textarea>
+        <br>
+        <button onclick="addRecommendation()">Send</button>
+        <h3>Recommendations:</h3>
+        <ul id="recommendationList"></ul>
+    </div>
+
+</div>
+
+<!-- Pop-up -->
+<div id="popup" class="popup">
+    <p>Recommendation submitted successfully!</p>
+    <button onclick="closePopup()">OK</button>
+</div>
+
+<script>
+    function addRecommendation() {
+        let input = document.getElementById("recommendationInput").value.trim();
+        if (input === "") {
+            alert("Please enter a recommendation.");
+            return;
+        }
+        let li = document.createElement("li");
+        li.textContent = input;
+        document.getElementById("recommendationList").appendChild(li);
+        document.getElementById("recommendationInput").value = "";
+        document.getElementById("popup").style.display = "block";
+    }
+
+    function closePopup() {
+        document.getElementById("popup").style.display = "none";
+    }
+</script>
+
+</body>
+</html>
